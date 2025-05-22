@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/contants.dart';
 
-
+import 'header_with_seachbox.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -10,7 +10,13 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     // it enable scrolling on small device
     return SingleChildScrollView(
-      
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          HeaderWithSearchBox(size: size),
+          SizedBox(height: kDefaultPadding),
+        ],
+      ),
     );
   }
 }
