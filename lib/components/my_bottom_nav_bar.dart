@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plantapp/contants.dart';
+import 'package:plantapp/home.dart';
+import 'package:plantapp/screens/details/detail_screen.dart';
 
 // import '../constants.dart';
 
@@ -41,7 +43,17 @@ class MyBottomNavBar extends StatelessWidget {
             icon: SvgPicture.asset("assets/icons/user-icon.svg"),
             onPressed: () {},
           ),
-          
+          IconButton(
+            icon: SvgPicture.asset("assets/icons/search.svg"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeMainPage(),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );
